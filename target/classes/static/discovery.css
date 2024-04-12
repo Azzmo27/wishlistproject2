@@ -1,0 +1,111 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+div {
+    position: relative;
+}
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+h2 {
+
+    font-weight: 400;
+    color: rgba(23, 21, 21, 0.75);
+    margin: 20px 0 0;
+    text-shadow: #3d3d3d;
+}
+
+h2:hover {
+    color: #f3f3f3;
+    background-color: #cebafa;
+}
+label {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+}
+label::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10px;
+    border-left: 8px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-top: -8px;
+    overflow: hidden;
+}
+.wishlist-text {
+    display: none;
+    padding-left: 35px;
+    font-family: "monospace";
+
+}
+input[type="checkbox"]:checked ~ .wishlist-text {
+    display: block;
+    max-height: 200px;
+    transition: max-height 0.4s ease;
+}
+
+.first-border {
+    border: 2px solid #3a3939;
+    padding: 20px;
+    width: 260px;
+    left: 25px;
+    top: 15px;
+    border-radius: 10px; /* added border-radius */
+}
+
+.first-border:hover {
+    background-color: #cebafa;
+    color: white;
+}
+
+.secound-border {
+    border: 2px solid #3a3939;
+    padding: 20px;
+    width: 280px;
+    left: 400px;
+    top: -502px;
+    border-radius: 10px; /* added border-radius */
+}
+
+
+.secound-border:hover {
+    background-color:#cebafa;
+    color: white;
+}
+
+
+
+.description  {
+    font-size: 40px; color: #bfaae8;
+    font-weight: bolder;
+    font-family: monospace;
+    z-index: 2;
+    position: center;
+    top: -900px;
+    left: 850px;
+    text-shadow: black;
+
+}
+
+
+
+
+
+
+
+
+
+

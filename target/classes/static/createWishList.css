@@ -1,0 +1,73 @@
+/* Style for the box */
+.wishlist-box {
+    background-color: floralwhite;
+    border: 3px solid #b495ec;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    padding: 20px; /* add some padding */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #decff6, #bb9efc);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.wishlisjt-box {
+    border: 3px solid #b495ec;
+    padding: 105px;
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, #decff6, #bb9efc);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 2;
+    top:35px;
+    width: 200px;
+
+}
+
+
+
+/* Style for the body */
+.page-body {
+    background-image: url("images/baggrund.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}*
+
+     /* Style for the form */
+ .wishlist-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+/* Style for the form label */
+.wishlist-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style for the form input */
+.wishlist-input {
+    display: block;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius:10px ;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+

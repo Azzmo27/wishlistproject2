@@ -1,0 +1,117 @@
+/* Style for the "Create a wishlist" button */
+.wishlist-button {
+    border: 1px solid #555;
+    background-color: #eee8f9;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 40px;
+    margin-bottom: 90px;
+    margin-top: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wishlist-button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.add-item-button, .view.wishlist, .btn-deleteWishlist {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.view.wishlist {
+    top: 2px;
+    margin-left: 75px;
+    color: black;
+    position: absolute;
+    z-index: 2;
+}
+
+.add-item-button {
+    top: 166px;
+    margin-left: -145px;
+    margin-right: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.view.wishlist:hover, .add-item-button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-deleteWishlist {
+    top: 170px;
+    margin-left: 110px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+#btn-deleteWishlist:hover {
+    background-color: #555;
+}
+.btn-deleteItem {
+    top: 170px;
+    margin-left: 110px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+.btn-deleteItem:hover {
+    background-color: #555;
+}
+
+#wishlist .social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#wishlist .social-media-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    transition: background-color 0.2s ease;
+}
+
+#wishlist .social-media-icons a:hover {
+    background-color: #b7b7b7;
+}
+
+#wishlist .social-media-icons a i {
+    color: #666666;
+}
+
+#wishlist .social-media-icons a:hover i {
+    color: #ffffff;
+}
+

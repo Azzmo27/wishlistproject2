@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <script src="https://kit.fontawesome.com/d17da6709b.js"></script>
+</head>
+<body>
+<div id="menuHeader">
+    Make A Wish
+</div>
+<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-botton">Home</a>
+<a href="discoveryPage" style=" color: #a174d7;" id="discovery-botton">Discovery</a>
+<div id="search-input">
+    <form action="/viewWishlistFromSearchbar" method="GET">
+        <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
+        <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<nav>
+    <ul>
+    </ul>
+</nav>
+<div id="positionForlogout">
+    <a href="/" class="logout-button">
+        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
+    </a>
+</div>
+
+<div class="foto">
+</div>
+
+<div class="wishlist-box" th:if="${not #lists.isEmpty(wishlists)}">
+    <div class="wishlist-info">
+        <h1>
+            <span class="wishlist-name" th:text="${wishlists[0].wishlist_name}"></span>
+            <span class="wishlist-id" th:text="'#' + ${wishlists[0].wishlist_id}"></span>
+        </h1>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Reserved</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:if="${items != null}" th:each="item: ${items}">
+            <form action="/reserveItem" method="post">
+                <td>
+                    <span class="item-name" name="item_name" th:text="${item.item_name}"></span>
+                </td>
+                <td>
+                    <span class="item-description" th:text="${item.item_description}"></span>
+                </td>
+
+                <td th:if="${item.reserved == false}">
+                    <label>
+                        <input type="checkbox" class="toggle-btn" name="reservedItems[]" value="${item.item_name}">
+                        <span class="checkmark"></span>
+                    </label>
+                </td>
+
+                <td th:if="${item.reserved}">
+                    <label>
+                        <input type="checkbox" class="toggle-btn reserved"  name="reservedItems[]" value="${item.item_name}"
+                               th:checked="${item.reserved}">
+                        <span class="checkmark reserved"></span>
+                    </label>
+                </td>
+
+                <td>
+                    <input type="hidden" name="item_id" th:value="${item.item_id}" checked = "checked">
+                    <button type="submit" >Save</button>
+                </td>
+            </form>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+<script src="js/search.js"></script>
+</body>
+</html>

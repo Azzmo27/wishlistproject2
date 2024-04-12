@@ -1,0 +1,65 @@
+.wishlist_box {
+    /* Set width and height */
+    width: 600px;
+    height: 400px;
+    top: -70px;
+    margin-left: 100px;
+    /* Add rounded corners to the card */
+    border-radius: 5px;
+    /* Add a box shadow for a 3D effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Add a transition effect when hovering over the card */
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+}
+.wishlist_box {
+    background-image: linear-gradient(180deg, #bb9efc, #e8c6e4, #decff6 100%);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.btn-deleteItem {
+    background-color: black;
+}
+span {
+    color: black;
+    font-size: 23px;
+}
+
+.btn-deleteItem, .btn-editItems {
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    padding: 8px 14px;
+    margin: 4px;
+
+}
+
+.btn-editItems:hover,
+.btn-deleteItem:hover {
+    opacity: 0.8;
+}
+
+.wishlist_box table caption {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+
+
+
+

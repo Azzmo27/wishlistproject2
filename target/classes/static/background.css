@@ -1,0 +1,201 @@
+.foto {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    margin-top: 0px;
+    background-image: url("images/baggrund.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+}
+
+#menuHeader {
+    background-color: #dbd2fd;
+    font-family: ".SF NS Display", sans-serif;
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 30px;
+    font-size: 35px;
+    padding: 30px 40px;
+    z-index: 2;
+    left: 0px;
+    top: 0;
+    border: 2px solid #c1abfd;
+
+
+}
+body {
+    font-family: Lato, sans-serif;
+    line-height: 0.5;
+    background: white;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px ;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav a {
+    color: #4f00e1;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: initial;
+    padding: 20px;
+}
+
+#positionForlogout{
+    position: absolute;
+    top: 42px;
+    right: 43px;
+}
+#home-botton:hover,#discovery-botton:hover{
+    background-color: #dbd2fd;
+    color: #ffffff;
+    /* Add a transition effect */
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+#home-botton {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 0;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    text-decoration: none;
+    left: 280px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-weight: 100;
+    font-family: Verdana;
+    border: 2px solid #c1abfd;
+
+}
+
+#discovery-botton {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    text-decoration: none;
+    left: 402px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-weight: 100;
+    font-family: Verdana;
+    border: 2px solid #c1abfd;
+
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#search-input {
+    position: absolute;
+    top: 30px;
+    right: 120px;
+    width: 600px;
+    height: 30px;
+    border: 2px solid #c1abfd;
+    padding: 24px 155px;
+    z-index: 2;
+    left: 538px;
+    top: 0;
+
+}
+#search-input input[type="text"] {
+    width: 650px;
+    height: 20px;
+    border-radius: 9px;
+    border: 2px solid #c1abfd;
+}
+
+#search-submit{
+    position: absolute;
+    top: 35px;
+    right: 120px;
+    padding: 1px 10px;
+    border-color: #a98ce3;
+    background: #d1b8fa;
+}
+
+.wishlist-box {
+    border: 3px solid #b495ec;
+    padding: 105px;
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, #decff6, #bb9efc);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 2;
+    top:35px;
+    width: 200px;
+
+}
+
+.wishlist-box h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    bottom: 45px;
+    color: #8a70c0;
+    margin-left: 30px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #a174d7;
+}
+
+input[type=text] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #a174d7;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    background-color: #a174d7;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+}
+
+input[type=submit]:hover {
+    background-color: #8c5da5;
+}
+
+
+
