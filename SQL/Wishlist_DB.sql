@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS item (
     wishlist_id INT,
     reserved BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (wishlist_id) REFERENCES wishlist(wishlist_id)
+
 );
 
 

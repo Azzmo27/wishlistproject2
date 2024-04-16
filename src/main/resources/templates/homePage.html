@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,17 +7,14 @@
     <link rel="stylesheet" type="text/css" href="background.css">
     <link rel="stylesheet" type="text/css" href="buttons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://kit.fontawesome.com/d17da6709b.js"> </script>
 </head>
 <body>
 <div id="menuHeader">
-    Make A Wish
+    Wishlist
 </div>
 
-<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-botton">Home</a>
-<a href="discoveryPage" style=" color: #a174d7;" id="discovery-botton">Discovery</a>
+<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-button">Home</a>
+<a href="discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
 <div id="search-input">
     <form action="/viewWishlistFromSearchbar" method="GET">
         <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
@@ -34,18 +30,16 @@
         <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
     </a>
 </div>
-<div class="foto">
-
-
+<div class="photo">
 </div>
-</body>
+
 <a href="/createList">
     <button class="btn wishlist-button" id="btn-create">Create a Wishlist</button>
 </a>
 
-<div class="wishlist-container" style="display: flex; flex-wrap: wrap;">
-    <!-- Loop through the wishlists and display their information -->
-    <div th:each="wishlist: ${wishlists}" class="sky-card">
+<div class="wishlist-container">
+
+    <div th:each="wishlist: ${wishlists}" class="wishlist-box">
         <div class="wishlistname">
             <p th:text="${wishlist.wishlist_name}"></p>
             <span class="wishlist-count" th:text="${wishlist.count}"></span>
@@ -56,9 +50,8 @@
         <div class="social-media-icons">
             <a href="#" title="Share"><i class="fa-solid fa-share fa-lg" style="color: black;"></i></a>&nbsp;&nbsp;&nbsp;
             <a href="mailto:?subject=@ViewBag.Title&amp;body=:@Url.Encode(Request.Url.ToString())" target="_blank" title="Email"><i class="fa-regular fa-envelope fa-lg" style="color:#518ee0;"></i></a>&nbsp;&nbsp;&nbsp;
-            <a href="https://twitter.com/intent/tweet?url=@Url.Encode(Request.Url.ToString())&text=@Url.Encode(PageTitle)" target="_blank" title="Tweet"><i class="fa-brands fa-twitter fa-lg"style="color:#518ee0;;"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=@Url.Encode(Request.Url.ToString())&text=@Url.Encode(PageTitle)" target="_blank" title="Tweet"><i class="fa-brands fa-twitter fa-lg"style="color:#518ee0;"></i></a>
         </div>
-
 
         <div class="wishlist-buttons">
             <a th:href="@{'/viewWishlist/'+${wishlist.wishlist_id}}">
@@ -76,8 +69,3 @@
 
 </body>
 </html>
-
-
-
-
-

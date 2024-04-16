@@ -8,14 +8,16 @@
 </head>
 <body>
 <div id="menuHeader">
-    Make A Wish
+    Wishlist
 </div>
 
-<a href="/homePage" style="margin-top: 40px; color: #a174d7;" id="home-botton">Home</a>
-<a href="/discoveryPage" style=" color: #a174d7;" id="discovery-botton">Discovery</a>
+<a href="/homePage" style="margin-top: 40px; color: #a174d7;" id="home-button">Home</a>
+<a href="/discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
 <div id="search-input">
     <form action="/viewWishlistFromSearchbar" method="GET">
-        <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
+        <label>
+            <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
+        </label>
         <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
     </form>
 </div>

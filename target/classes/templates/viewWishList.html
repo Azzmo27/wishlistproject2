@@ -10,11 +10,11 @@
 
 <body>
 <div id="menuHeader">
-    //Overskrift mangler
+    Wishlist
 </div>
 
-<a href="/homePage" style="margin-top: 40px; color: #a174d7;" id="home-botton">Home</a>
-<a href="/discoveryPage" style=" color: #a174d7;" id="discovery-botton">Discovery</a>
+<a href="/homePage" style="margin-top: 40px; color: #a174d7;" id="home-button">Home</a>
+<a href="/discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
 <div id="search-input">
     <form action="/viewWishlistFromSearchbar" method="GET">
         <input type="text" placeholder="Search on your friends wishlists.." name="wishlist_id" required>
@@ -30,12 +30,12 @@
         <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
     </a>
 </div>
-<div class="foto">
+<div class="Photo">
 
     <div class="wishlist_box">
         <table>
             <tbody>
-            <h1 style="color: black"> View wishlist </h1>
+            <h1 style="color: black"> View Wishlist </h1>
 
 
             <tr th:each="item:${items}">

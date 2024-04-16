@@ -14,38 +14,21 @@
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
-.wishlisjt-box {
-    border: 3px solid #b495ec;
-    padding: 105px;
-    margin: 20px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(to bottom, #decff6, #bb9efc);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    position: relative;
-    z-index: 2;
-    top:35px;
-    width: 200px;
-
-}
-
-
 
 /* Style for the body */
 .page-body {
-    background-image: url("images/baggrund.png");
+    background-image: url("https://www.flickr.com/photos/8047705@N02/5572197407");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-}*
+}
 
-     /* Style for the form */
- .wishlist-form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
- }
+/* Style for the form */
+.wishlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Style for the form label */
 .wishlist-label {
@@ -68,6 +51,3 @@ form input[type="submit"] {
     border-radius: 10px;
     padding: 5px;
 }
-
-
-
