@@ -12,7 +12,11 @@ import java.util.List;
 @Repository
 public class WishListRepository {
     @Autowired
-    JdbcTemplate template;
+    private final JdbcTemplate template;
+
+    public WishListRepository(JdbcTemplate template) {
+        this.template = template;
+    }
     public List<WishList> getWishList(int userId) {
         String sql = "SELECT * FROM wishlist WHERE user_id = ?";
         RowMapper<WishList> rowMapper = new BeanPropertyRowMapper<>(WishList.class);

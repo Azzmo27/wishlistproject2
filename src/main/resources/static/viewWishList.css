@@ -4,9 +4,9 @@
     height: 400px;
     top: -70px;
     margin-left: 100px;
-    /* Add rounded corners to the card */
+
     border-radius: 5px;
-    /* Add a box shadow for a 3D effect */
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* Add a transition effect when hovering over the card */
     transition: 0.3s;

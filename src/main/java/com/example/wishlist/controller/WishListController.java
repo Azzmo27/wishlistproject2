@@ -34,7 +34,7 @@ public class WishListController {
 
     @GetMapping("/registration")
     public String registrationSection() {
-        return "home/registration";
+        return "registration";
     }
 
     @PostMapping("/newRegistration")
@@ -42,7 +42,7 @@ public class WishListController {
                                   @RequestParam("user_password") String user_password){
         userService.createNewUser(user);
         userId = userService.getUserId(username, user_password);
-        return "home/homePage";
+        return "homePage";
     }
 
     @PostMapping ("/login")
@@ -71,7 +71,7 @@ public class WishListController {
     public String homePageAddItem(Model model){
         List<Item> items = itemService.fetchItems();
         model.addAttribute("items",items );
-        return "home/homePage";
+        return "homePage";
     }
 
     @PostMapping("/generateUniqueUrl/{wishlist_id}")
@@ -95,7 +95,7 @@ public class WishListController {
             model.addAttribute("wishlists", List.of(wishList));
             List<Item> items = itemService.viewWishlist(wishList.getWishlistId());
             model.addAttribute("items", items);
-            return "home/showWishlist";
+            return "showWishlist";
         } else {
             return "wishlistNotFound";
         }
@@ -125,13 +125,13 @@ public class WishListController {
         model.addAttribute("wishlists", wishlists);
         List<Item> items = itemService.viewWishlist(wishlist_id);
         model.addAttribute("items", items);
-        return "home/showWishlist";
+        return "showWishlist";
     }
 
     @GetMapping("/addItem/{wishlist_id}")
     public String addItem(@PathVariable("wishlist_id") int wishlist_id, Model model) {
         model.addAttribute("wishlist_id", wishlist_id);
-        return "home/addItem";
+        return "addItem";
     }
 
     @PostMapping("/addItemToWishlist")
@@ -177,7 +177,7 @@ public class WishListController {
     @GetMapping("/editItems/{item_id}")
     public String editItems(@PathVariable("item_id") int id, Model model){
         model.addAttribute("item", itemService.findPersonById(id));
-        return "home/editItems";
+        return "editItem";
     }
 
     @PostMapping("/editWishlistItems")

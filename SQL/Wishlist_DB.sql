@@ -1,6 +1,7 @@
-CREATE DATABASE IF NOT EXISTS WishlistDatabase;
-CREATE SCHEMA IF NOT EXISTS WishlistDatabase;
-USE WishlistDatabase;
+
+CREATE DATABASE IF NOT EXISTS wishlist_DB;
+CREATE SCHEMA IF NOT EXISTS wishlist_DB;
+USE wishlist_DB;
 
 CREATE TABLE IF NOT EXISTS user (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,4 +30,5 @@ CREATE TABLE IF NOT EXISTS item (
     reserved BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (wishlist_id) REFERENCES wishlist(wishlist_id)
 );
+
 
