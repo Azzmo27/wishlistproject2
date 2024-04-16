@@ -29,7 +29,7 @@ public class WishListController {
 
     @GetMapping("/")
     public String frontPage () {
-        return "home/frontPage";
+        return "login";
     }
 
     @GetMapping("/registration")
@@ -56,7 +56,7 @@ public class WishListController {
         }
         else
         {
-            return "home/frontPage";
+            return "frontPage";
         }
     }
 
@@ -64,7 +64,7 @@ public class WishListController {
     public String homePageWishList(Model model) {
         List<WishList> wishLists = wishListService.getWishList(userId);
         model.addAttribute("wishlists", wishLists);
-        return "home/homePage";
+        return "homePage";
     }
 
     @GetMapping("/homePageAddItem")
@@ -160,7 +160,7 @@ public class WishListController {
     public String viewWishlist(@PathVariable("wishlist_id") int wishlist_id,Model model) {
         List<Item> items =itemService.viewWishlist(wishlist_id);
         model.addAttribute("items", items);
-        return "home/viewWishlist";
+        return "viewWishList";
     }
 
     @GetMapping("/deleteItem/{id}")
