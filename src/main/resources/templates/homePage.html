@@ -41,11 +41,11 @@
 
     <div th:each="wishlist: ${wishlists}" class="wishlist-box">
         <div class="wishlistname">
-            <p th:text="${wishlist.wishlist_name}"></p>
+            <p th:text="${wishlist.wishlistName}"></p>
             <span class="wishlist-count" th:text="${wishlist.count}"></span>
         </div>
-        <p class="wishlist-description" th:text="${wishlist.wishlist_description}"></p>
-        <p class="wishlist-id" th:text="'Share Code: ' + ${wishlist.wishlist_id}"></p>
+        <p class="wishlist-description" th:text="${wishlist.wishlistDescription}"></p>
+        <p class="wishlist-id" th:text="'Share Code: ' + ${wishlist.wishlistId}"></p>
 
         <div class="social-media-icons">
             <a href="#" title="Share"><i class="fa-solid fa-share fa-lg" style="color: black;"></i></a>&nbsp;&nbsp;&nbsp;
@@ -54,13 +54,13 @@
         </div>
 
         <div class="wishlist-buttons">
-            <a th:href="@{'/viewWishlist/'+${wishlist.wishlist_id}}">
+            <a th:href="@{'/viewWishlist/'+${wishlist.wishlistId}}">
                 <button class="view wishlist"><i class="fa-solid fa-eye"></i></button>
             </a>
-            <a th:href="@{'/addItem/'+${wishlist.wishlist_id}}">
+            <a th:href="@{'/addItem/'+${wishlist.wishlistId}}">
                 <button class="add-item-button"><i class="fa-solid fa-plus"></i></button>
             </a>
-            <a th:href="@{'/deleteWishlist/'+${wishlist.wishlist_id}}">
+            <a th:href="@{'/deleteWishlist/'+${wishlist.wishlistId}}">
                 <button class="btn-deleteWishlist" id="btn-deleteWishlist"><i class="fa-solid fa-trash-can"></i></button>
             </a>
         </div>

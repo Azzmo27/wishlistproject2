@@ -95,9 +95,9 @@ public class WishListController {
             model.addAttribute("wishlists", List.of(wishList));
             List<Item> items = itemService.viewWishlist(wishList.getWishlistId());
             model.addAttribute("items", items);
-            return "showWishlist";
+            return "showWishList";
         } else {
-            return "wishlistNotFound";
+            return "showWishList";
         }
     }
 
@@ -109,14 +109,14 @@ public class WishListController {
 
     @GetMapping("/createList")
     public String createList(){
-        return "home/createList";
+        return "createList";
     }
 
     @GetMapping("/discoveryPage")
     public String discoveryPage(Model model) {
         List<WishList> wishlist = wishListService.discoverWishLists();
         model.addAttribute("lists", wishlist);
-        return "home/discoveryPage";
+        return "discoveryPage";
     }
 
     @GetMapping("/viewWishlistFromSearchbar")
@@ -125,7 +125,7 @@ public class WishListController {
         model.addAttribute("wishlists", wishlists);
         List<Item> items = itemService.viewWishlist(wishlist_id);
         model.addAttribute("items", items);
-        return "showWishlist";
+        return "showWishList";
     }
 
     @GetMapping("/addItem/{wishlist_id}")
