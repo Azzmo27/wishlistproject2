@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/background.css">
-    <script src="https://kit.fontawesome.com/d17da6709b.js"></script>
+    <title>Add Wishlist Item</title>
+    <!-- Tilføj dine CSS-stilarter og JavaScript-biblioteker her -->
 </head>
 <body>
 <div id="menuHeader">
@@ -31,7 +30,7 @@
     </a>
 </div>
 
-<div class="foto">
+<div class="photo">
 </div>
 
 <div class="wishlist-box">
@@ -44,10 +43,13 @@
         <label for="item_description">Item Description:</label>
         <input type="text" name="item_description" id="item_description">
 
-        <input type="hidden" name="wishlist_id" th:value="${wishlist_id}">
+        <input type="hidden" name="wishlist_id" value="${wishlistId}">
+
         <input type="submit" value="Add Item"/>
 
     </form>
 </div>
+
+<!-- Tilføj eventuelt yderligere HTML-elementer og JavaScript til denne fil efter behov -->
 </body>
 </html>

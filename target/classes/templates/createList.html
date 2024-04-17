@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="base.css">
-    <link rel="stylesheet" type="text/css" href="createList.css">
-    <script src="https://kit.fontawesome.com/d17da6709b.js"> </script>
+    <title>Create Your Wishlist</title>
+    <link rel="stylesheet" type="text/css" href="../static/base.css">
+    <link rel="stylesheet" type="text/css" href="../static/createWishList.css">
+    <script src="https://kit.fontawesome.com/d17da6709b.js"></script>
 </head>
 <body>
 <div id="menuHeader">
     Wishlist
 </div>
 
-<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-botton">Home</a>
-<a href="discoveryPage" style=" color: #a174d7;" id="discovery-botton">Discovery</a>
+<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-button">Home</a>
+<a href="discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
 <div id="search-input">
     <form action="/viewWishlistFromSearchbar" method="GET">
         <label>
-            <input type="text" placeholder="   Search on your friends wishlists.." name="wishlist_id" required>
+            <input type="text" placeholder="   Search on your friends wishlists.." name="wishlistId" required>
         </label>
         <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
     </form>
@@ -31,27 +31,31 @@
         <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
     </a>
 </div>
-<div class="foto">
 
+<div class="photo">
 </div>
-</body>
-</html>
-<body class="page-body">
 
 <h1 class="page-title">Create Your Wishlist</h1>
 <form class="wishlist-form" action="/makeList" method="post">
     <div class="wishlist-box">
-
         <label class="wishlist-label">Enter wishlist name:</label>
-        <input class="wishlist-input" type="text" name="wishlist_name">
+        <input class="wishlist-input" type="text" name="wishlistName">
 
         <label class="wishlist-label">Enter wishlist description:</label>
-        <input class="wishlist-input" type="text" name="wishlist_description">
+        <input class="wishlist-input" type="text" name="wishlistDescription">
 
-        <input type="submit" value="Save wishlist">
+        <h2>Add items to your wishlist:</h2>
+        <div id="items-container">
+            <div class="item-row">
+                <input class="wishlist-input" type="text" name="itemName[]" placeholder="Item Name">
+                <input class="wishlist-input" type="text" name="itemDescription[]" placeholder="Item Description">
+            </div>
+        </div>
+        <button type="button" onclick="addNewItem()">Add Another Item</button>
+
+        <input type="submit" value="Save Wishlist">
     </div>
 </form>
 
-</body>
 </body>
 </html>

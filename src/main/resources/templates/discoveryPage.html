@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discovery Page</title>
+    <!-- Tilføj dine CSS-stilarter og JavaScript-biblioteker her -->
+    <style>
+        /* Tilføj dine CSS-stilarter her */
+    </style>
+</head>
+<body>
+<div id="menuHeader">
+    Make A Wish
+</div>
+
+<a href="homePage" style="margin-top: 40px; color: #a174d7;" id="home-button">Home</a>
+<a href="discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
+<div id="search-input">
+    <form action="/viewWishlistFromSearchbar" method="GET">
+        <input type="text" placeholder="Search on your friends wishlists.." name="wishlist_id" required>
+        <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<nav>
+    <ul>
+    </ul>
+</nav>
+<div id="positionForlogout">
+    <a href="/" class="logout-button">
+        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
+    </a>
+</div>
+
+<!-- Tilføj eventuelt yderligere HTML-elementer og JavaScript til denne fil efter behov -->
+<div class="foto">
+    <div class="wishlist-section">
+        <div class="wishlist">
+            <h2>Birthday Wishlist</h2>
+            <ul>
+                <li onclick="addItemToWishlist('Noise-cancelling headphones')">Noise-cancelling headphones</li>
+                <li onclick="addItemToWishlist('Smartwatch')">Smartwatch</li>
+                <li onclick="addItemToWishlist('Wireless earbuds')">Wireless earbuds</li>
+                <li onclick="addItemToWishlist('Cozy weighted blanket')">A cozy weighted blanket</li>
+                <li onclick="addItemToWishlist('High-quality cookware')">A set of high-quality cookware</li>
+                <li onclick="addItemToWishlist('Espresso machine')">Espresso machine</li>
+                <li onclick="addItemToWishlist('Fitness tracker')">A new fitness tracker</li>
+                <li onclick="addItemToWishlist('Yoga mat')">Yoga mat</li>
+                <li onclick="addItemToWishlist('Resistance bands')">Resistance bands</li>
+            </ul>
+        </div>
+
+        <!-- Add more wishlist sections here -->
+    </div>
+</div>
+
+<script>
+    function addItemToWishlist(itemName) {
+        // Her kan du tilføje JavaScript-funktionalitet til at tilføje ønsket til brugerens ønskeliste
+        alert("Item added to wishlist: " + itemName);
+        // Eksempel: Du kan sende en AJAX-anmodning til serveren for at tilføje ønsket til ønskelisten
+    }
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* Table styles */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -10,7 +10,7 @@ th, td {
     text-align: left;
 }
 
-/* Box styles */
+
 .wishlist-box {
     border: 3px solid #b495ec;
     padding: 115px;

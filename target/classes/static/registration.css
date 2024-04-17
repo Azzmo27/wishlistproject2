@@ -1,35 +1,35 @@
 .wishlist-container {
-    /* Set the display to flex and wrap items to the next line */
+
     display: flex;
     flex-wrap: wrap;
-    /* Center items horizontally */
+
     justify-content: center;
-    /* Add margin to the top */
+
     margin-top: 80px;
     cursor: pointer;
     z-index: 1;
     position: relative;
 }
-/* Style for each wishlist item card */
+
 .sky-card {
-    /* Set width and height */
+
     width: 300px;
     height: 200px;
     top: 60px;
-    /* Add margin to create some space between cards */
+
     margin: 20px;
-    /* Add rounded corners to the card */
+
     border-radius: 5px;
-    /* Add a box shadow for a 3D effect */
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* Add a transition effect when hovering over the card */
+
     transition: 0.3s;
     cursor: pointer;
     z-index: 1;
     position: relative;
 }
 
-/* Form and colour */
+
 .sky-card {
     background-color: #6f4a8e;
     background-image: linear-gradient(180deg, #bb9efc, #e8c6e4, #decff6 100%);
@@ -41,12 +41,12 @@
     flex-direction: column;
 }
 
-/* Add a stronger box shadow when hovering over the card */
+
 .sky-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the wishlist item name and "Add Item" button */
+
 .wishlistname {
     /* Align items vertically */
     display: flex;

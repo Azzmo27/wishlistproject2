@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/background.css">
+    <link rel="stylesheet" type="text/css" href="../static/background.css">
     <script src="https://kit.fontawesome.com/d17da6709b.js"> </script>
 </head>
 <body>
@@ -30,7 +30,7 @@
         <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
     </a>
 </div>
-<div class="foto">
+<div class=photo">
 
 
 </div>
@@ -38,13 +38,13 @@
     <form action="/editWishlistItems" method="post">
 
         <label for="item_id">Item ID:</label>
-        <input type="text" id="item_id" name="item_id" th:value="${item.item_id}" readonly>
+        <input type="text" id="item_id" name="item_id" th:value="${item.itemId}" readonly>
 
         <label for="item_name">Item Name:</label>
-        <input type="text" id="item_name" name="item_name" th:value="${item.item_name}">
+        <input type="text" id="item_name" name="item_name" th:value="${item.itemName}">
 
         <label for="item_description">Item Description:</label>
-        <input type="text" id="item_description" name="item_description" th:value="${item.item_description}">
+        <input type="text" id="item_description" name="item_description" th:value="${item.itemDescription}">
 
         <input type="submit" value="Save changes" style="background-color: #4CAF50">
 

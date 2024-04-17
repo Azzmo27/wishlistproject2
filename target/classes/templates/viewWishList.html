@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/background.css">
-    <link rel="stylesheet" type="text/css" href="/viewWishlist.css">
+    <link rel="stylesheet" type="text/css" href="../static/background.css">
+    <link rel="stylesheet" type="text/css" href="../static/viewWishList.css">
     <script src="https://kit.fontawesome.com/d17da6709b.js"> </script>
 </head>
 
@@ -30,7 +30,7 @@
         <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #a86cd0;"></i>
     </a>
 </div>
-<div class="Photo">
+<div class="photo">
 
     <div class="wishlist_box">
         <table>
@@ -40,16 +40,16 @@
 
             <tr th:each="item:${items}">
                 <td>
-                    <span th:text="${item.item_name}"></span>
+                    <span th:text="${item.itemName}"></span>
                 </td>
                 <td>
-                    <span  th:text="${item.item_description}"></span>
+                    <span  th:text="${item.itemDescription}"></span>
                 </td>
                 <td style="display: flex; align-items: center;">
-                    <a th:href="@{'/editItems/'+${item.item_id}}" class="btn-editItems">
+                    <a th:href="@{'/editItems/'+${item.itemId}}" class="btn-editItems">
                         <button class="btn-editItems" style="margin-right: 10px;"><i class="fa-solid fa-pencil"></i></button>
                     </a>
-                    <a th:href="@{'/deleteItem/'+${item.item_id}}">
+                    <a th:href="@{'/deleteItem/'+${item.itemId}}">
                         <button class="btn-deleteItem" id="btn-deleteWishlist"><i class="fa-solid fa-trash-can"></i></button>
                     </a>
                 </td>
