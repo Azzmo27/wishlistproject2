@@ -1,1 +1,1 @@
-Wishlist 
+Wishlist Project
