@@ -26,7 +26,7 @@ h2 {
 
 h2:hover {
     color: #f3f3f3;
-    background-color: #cebafa;
+    background-color: #87CEFA;
 }
 label {
     position: relative;
@@ -67,7 +67,7 @@ input[type="checkbox"]:checked ~ .wishlist-text {
 }
 
 .first-border:hover {
-    background-color: #cebafa;
+    background-color: #87CEFA;
     color: white;
 }
 
@@ -82,14 +82,14 @@ input[type="checkbox"]:checked ~ .wishlist-text {
 
 
 .secound-border:hover {
-    background-color:#cebafa;
+    background-color:#87CEFA;
     color: white;
 }
 
 
 
 .description  {
-    font-size: 40px; color: #bfaae8;
+    font-size: 40px; color: #87CEFA;
     font-weight: bolder;
     font-family: monospace;
     z-index: 2;
