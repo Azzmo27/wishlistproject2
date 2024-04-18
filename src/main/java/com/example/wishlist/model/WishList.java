@@ -15,6 +15,10 @@ public class WishList {
         this.wishlistId = wishlistID;
     }
 
+    public WishList() {
+
+    }
+
     public int getWishlistId() {
         return wishlistId;
     }

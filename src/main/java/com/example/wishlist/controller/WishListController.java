@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @Controller
@@ -28,7 +29,7 @@ public class WishListController {
     private int userId;
 
     @GetMapping("/")
-    public String frontPage () {
+    public String frontPage() {
         return "login";
     }
 
@@ -39,13 +40,13 @@ public class WishListController {
 
     @PostMapping("/newRegistration")
     public String newRegistration(@ModelAttribute User user, @RequestParam("username") String username,
-                                  @RequestParam("user_password") String user_password){
+                                  @RequestParam("user_password") String user_password) {
         userService.createNewUser(user);
         userId = userService.getUserId(username, user_password);
         return "homePage";
     }
 
-    @PostMapping ("/login")
+    @PostMapping("/login")
     public String login(@RequestParam("username") String username, @RequestParam("user_password")
     String user_password, Model model) {
         model.addAttribute("user", userService.verifyUserLogin(username, user_password));
@@ -53,9 +54,7 @@ public class WishListController {
         if (userService.verifyUserLogin(username, user_password)) {
             userId = userService.getUserId(username, user_password);
             return "redirect:/homePage";
-        }
-        else
-        {
+        } else {
             return "login";
         }
     }
@@ -68,16 +67,16 @@ public class WishListController {
     }
 
     @GetMapping("/homePageAddItem")
-    public String homePageAddItem(Model model){
+    public String homePageAddItem(Model model) {
         List<Item> items = itemService.fetchItems();
-        model.addAttribute("items",items );
+        model.addAttribute("items", items);
         return "homePage";
     }
 
     @PostMapping("/generateUniqueUrl/{wishlist_id}")
     public ResponseEntity<String> generateUniqueUrl(@PathVariable("wishlist_id") int wishlistId) {
-        String uniqueUrl = wishListService.generateUniqueUrl(wishlistId); // Call generateUniqueUrl method from WishListService
-        WishList wishList = wishListService.findWishlist(wishlistId).get(0); // Assuming findWishlist returns a list and we get the first item
+        String uniqueUrl = wishListService.generateUniqueUrl(wishlistId);
+        WishList wishList = wishListService.findWishlist(wishlistId).get(0);
         if (wishList != null) {
             wishList.setUniqueUrl(uniqueUrl);
             wishListService.saveOrUpdateWishList(wishList);
@@ -86,7 +85,6 @@ public class WishListController {
             return ResponseEntity.notFound().build();
         }
     }
-
 
     @GetMapping("/sharedWishlist")
     public String getSharedWishlist(@RequestParam("url") String uniqueUrl, Model model) {
@@ -106,9 +104,15 @@ public class WishListController {
         wishListService.createWishList(wishList, userId);
         return "redirect:/homePage";
     }
+    @PostMapping("/saveWishlist")
+    public String saveWishlist(@ModelAttribute WishList wishList) {
+        wishListService.saveOrUpdateWishList(wishList);
+        return "redirect:/homePage";
+    }
+
 
     @GetMapping("/createList")
-    public String createList(){
+    public String createList() {
         return "createList";
     }
 
@@ -151,37 +155,36 @@ public class WishListController {
     }
 
     @PostMapping("/reserveItem")
-    public String reserveItem(@ModelAttribute Item i){
+    public String reserveItem(@ModelAttribute Item i) {
         itemService.reserveItem(i);
         return "redirect:/homePage";
     }
 
     @GetMapping("/viewWishlist/{wishlist_id}")
-    public String viewWishlist(@PathVariable("wishlist_id") int wishlist_id,Model model) {
-        List<Item> items =itemService.viewWishlist(wishlist_id);
+    public String viewWishlist(@PathVariable("wishlist_id") int wishlist_id, Model model) {
+        List<Item> items = itemService.viewWishlist(wishlist_id);
         model.addAttribute("items", items);
         return "viewWishList";
     }
 
     @GetMapping("/deleteItem/{id}")
-    public String deleteItem(@PathVariable("id")int id){
-        boolean deleted= itemService.deleteItem(id);
+    public String deleteItem(@PathVariable("id") int id) {
+        boolean deleted = itemService.deleteItem(id);
         if (deleted) {
             return "redirect:/homePage";
-        }
-        else {
+        } else {
             return "redirect:/homePage";
         }
     }
 
     @GetMapping("/editItems/{item_id}")
-    public String editItems(@PathVariable("item_id") int id, Model model){
+    public String editItems(@PathVariable("item_id") int id, Model model) {
         model.addAttribute("item", itemService.findPersonById(id));
         return "editItem";
     }
 
     @PostMapping("/editWishlistItems")
-    public String editWishlistItems(@ModelAttribute Item item ){
+    public String editWishlistItems(@ModelAttribute Item item) {
         itemService.editItem(item.getItemId(), item);
         return "redirect:/homePage";
     }

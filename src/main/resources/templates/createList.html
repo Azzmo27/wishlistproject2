@@ -39,20 +39,35 @@
 <form class="wishlist-form" action="/makeList" method="post">
     <div class="wishlist-box">
         <label class="wishlist-label">Enter wishlist name:</label>
-        <input class="wishlist-input" type="text" name="wishlistName">
+        <label>
+            <input class="wishlist-input" type="text" name="wishlistName">
+        </label>
 
         <label class="wishlist-label">Enter wishlist description:</label>
-        <input class="wishlist-input" type="text" name="wishlistDescription">
+        <label>
+            <input class="wishlist-input" type="text" name="wishlistDescription">
+        </label>
 
         <h2>Add items to your wishlist:</h2>
         <div id="items-container">
             <div class="item-row">
-                <input class="wishlist-input" type="text" name="itemName[]" placeholder="Item Name">
-                <input class="wishlist-input" type="text" name="itemDescription[]" placeholder="Item Description">
+                <label>
+                    <input class="wishlist-input" type="text" name="itemName[]" placeholder="Item Name">
+                </label>
+                <label>
+                    <input class="wishlist-input" type="text" name="itemDescription[]" placeholder="Item Description">
+                </label>
             </div>
+            <div class="item-row">
+                <label>
+                    <input class="wishlist-input" type="text" name="itemName[]" placeholder="Item Name">
+                </label>
+                <label>
+                    <input class="wishlist-input" type="text" name="itemDescription[]" placeholder="Item Description">
+                </label>
+            </div>
+            <!-- Add more item rows as needed -->
         </div>
-        <button type="button" onclick="addNewItem()">Add Another Item</button>
-
         <input type="submit" value="Save Wishlist">
     </div>
 </form>
