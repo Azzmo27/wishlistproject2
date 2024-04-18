@@ -50,7 +50,6 @@ public class User {
         return birthday;
     }
 
-
     public void setUsername(String username) {
         this.username = username;
     }
