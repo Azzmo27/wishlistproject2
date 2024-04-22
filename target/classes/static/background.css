@@ -14,7 +14,7 @@
     left: 0;
 }
 #menuHeader {
-    background-color: #dbd2fd;
+    background-color: #d2ebfd;
     font-family: ".SF NS Display", sans-serif;
     position: absolute;
     font-weight: bold;
@@ -25,7 +25,7 @@
     z-index: 2;
     left: 0px;
     top: 0;
-    border: 2px solid #c1abfd;
+    border: 2px solid #87CEFA;
 
 
 }
@@ -44,7 +44,7 @@ nav ul {
     list-style: none;
 }
 nav a {
-    color: #4f00e1;
+    color: #87CEFA;
     text-decoration: none;
     font-size: 19px;
     font-weight: initial;
@@ -57,7 +57,7 @@ nav a {
     right: 43px;
 }
 #home-botton:hover,#discovery-botton:hover{
-    background-color: #dbd2fd;
+    background-color: #d2e5fd;
     color: #ffffff;
     /* Add a transition effect */
     transition: all 0.2s ease-in-out;
@@ -78,7 +78,7 @@ nav a {
     font-weight: bolder;
     font-weight: 100;
     font-family: Verdana;
-    border: 2px solid #c1abfd;
+    border: 2px solid #87CEFA;
 
 }
 
@@ -95,7 +95,7 @@ nav a {
     font-weight: bolder;
     font-weight: 100;
     font-family: Verdana;
-    border: 2px solid #c1abfd;
+    border: 2px solid #87CEFA;
 
 }
 
@@ -114,7 +114,7 @@ nav a {
     right: 120px;
     width: 600px;
     height: 30px;
-    border: 2px solid #c1abfd;
+    border: 2px solid #87CEFA;
     padding: 24px 155px;
     z-index: 2;
     left: 538px;
@@ -125,7 +125,7 @@ nav a {
     width: 650px;
     height: 20px;
     border-radius: 9px;
-    border: 2px solid #c1abfd;
+    border: 2px solid #87CEFA;
 }
 
 #search-submit{
@@ -133,18 +133,18 @@ nav a {
     top: 35px;
     right: 120px;
     padding: 1px 10px;
-    border-color: #a98ce3;
-    background: #d1b8fa;
+    border-color: #87CEFA;
+    background: #87CEFA;
 }
 
 .wishlist-box {
-    border: 3px solid #b495ec;
+    border: 3px solid #87CEFA;
     padding: 105px;
     margin: 20px 0;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(to bottom, #decff6, #bb9efc);
+    background: linear-gradient(to bottom, #cff6f6, #87CEFA);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     position: relative;
     z-index: 2;
@@ -159,7 +159,7 @@ nav a {
     position: relative;
     z-index: 1;
     bottom: 45px;
-    color: #8a70c0;
+    color: #87CEFA;
     margin-left: 30px;
 }
 label {
@@ -167,20 +167,20 @@ label {
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: #a174d7;
+    color: #87CEFA;
 }
 
 input[type=text] {
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #a174d7;
+    border: 2px solid #87CEFA;
     font-size: 16px;
     color: #333;
     margin-bottom: 20px;
 }
 
 input[type=submit] {
-    background-color: #a174d7;
+    background-color: #87CEFA;
     color: #fff;
     border: none;
     border-radius: 7px;
@@ -193,7 +193,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #8c5da5;
+    background-color: #87CEFA;
 }
 
 

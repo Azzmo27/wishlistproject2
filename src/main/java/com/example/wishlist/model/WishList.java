@@ -1,5 +1,4 @@
 package com.example.wishlist.model;
-
 public class WishList {
     private Integer wishlistId;
     private String wishlistName;
@@ -7,23 +6,23 @@ public class WishList {
     private int count;
     private String uniqueUrl;
 
-    public WishList(String uniqueURL, Integer wishlistID, String wishlistName, String wishlistDescription, int count) {
-        this.uniqueUrl = uniqueURL;
-        this.count = count;
+    public WishList(String uniqueUrl, Integer wishlistId, String wishlistName, String wishlistDescription, int count) {
+        this.uniqueUrl = uniqueUrl;
+        this.wishlistId = wishlistId;
         this.wishlistName = wishlistName;
         this.wishlistDescription = wishlistDescription;
-        this.wishlistId = wishlistID;
+        this.count = count;
     }
 
     public WishList() {
 
     }
 
-    public int getWishlistId() {
+    public Integer getWishlistId() {
         return wishlistId;
     }
 
-    public void setWishlistId(int wishlistId) {
+    public void setWishlistId(Integer wishlistId) {
         this.wishlistId = wishlistId;
     }
 
@@ -50,6 +49,7 @@ public class WishList {
     public void setCount(int count) {
         this.count = count;
     }
+
     public String getUniqueUrl() {
         return uniqueUrl;
     }
@@ -58,4 +58,3 @@ public class WishList {
         this.uniqueUrl = uniqueUrl;
     }
 }
-

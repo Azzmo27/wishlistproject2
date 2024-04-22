@@ -1,5 +1,6 @@
 package com.example.wishlist;
 
+import com.example.wishlist.model.User;
 import com.example.wishlist.model.WishList;
 import com.example.wishlist.repository.WishListRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -63,7 +64,7 @@ public class WishlistRepositoryTests {
         wishList.setWishlistDescription("Test Description");
         int userId = 1;
 
-        assertDoesNotThrow(() -> wishListRepository.createWishList(wishList, userId));
+        assertDoesNotThrow(() -> wishListRepository.createWishList(wishList, new User().getUserId()));
 
         verify(jdbcTemplate, times(1)).update(anyString(), any(), any(), anyInt());
     }
@@ -108,8 +109,9 @@ public class WishlistRepositoryTests {
         int wishlistId = 1;
         assertTrue(wishListRepository.deleteWishlist(wishlistId));
 
-        verify(jdbcTemplate, times(1)).update(anyString(), anyInt());
-        verify(jdbcTemplate, times(1)).update(anyString(), anyInt());
+        verify(jdbcTemplate, times(1)).update("DELETE FROM item WHERE wishlist_id = ?", wishlistId);
+        verify(jdbcTemplate, times(1)).update("DELETE FROM wishlist WHERE wishlist_id = ?", wishlistId);
     }
+
 }
 

@@ -15,7 +15,7 @@
     position: relative;
 }
 .wishlist_box {
-    background-image: linear-gradient(180deg, #bb9efc, #e8c6e4, #decff6 100%);
+    background-image: linear-gradient(180deg, #87CEFA, #c6dfe8, #cfeaf6 100%);
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     display: flex;

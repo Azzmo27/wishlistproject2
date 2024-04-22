@@ -17,16 +17,18 @@ import java.util.List;
 @Controller
 public class WishListController {
 
-    @Autowired
-    private WishListService wishListService;
-
-    @Autowired
-    private ItemService itemService;
-
-    @Autowired
-    UserService userService;
-
+    private final WishListService wishListService;
+    private final ItemService itemService;
+    private final UserService userService;
     private int userId;
+
+    @Autowired
+    public WishListController(WishListService wishListService, ItemService itemService, UserService userService) {
+        this.wishListService = wishListService;
+        this.itemService = itemService;
+        this.userService = userService;
+    }
+
 
     @GetMapping("/")
     public String frontPage() {
@@ -42,8 +44,8 @@ public class WishListController {
     public String newRegistration(@ModelAttribute User user, @RequestParam("username") String username,
                                   @RequestParam("user_password") String user_password) {
         userService.createNewUser(user);
-        userId = userService.getUserId(username, user_password);
-        return "homePage";
+        int userId = userService.getUserId(username, user_password);
+        return "index";
     }
 
     @PostMapping("/login")
@@ -63,14 +65,14 @@ public class WishListController {
     public String homePageWishList(Model model) {
         List<WishList> wishLists = wishListService.getWishList(userId);
         model.addAttribute("wishlists", wishLists);
-        return "homePage";
+        return "index";
     }
 
     @GetMapping("/homePageAddItem")
     public String homePageAddItem(Model model) {
         List<Item> items = itemService.fetchItems();
         model.addAttribute("items", items);
-        return "homePage";
+        return "index";
     }
 
     @PostMapping("/generateUniqueUrl/{wishlist_id}")
@@ -93,10 +95,8 @@ public class WishListController {
             model.addAttribute("wishlists", List.of(wishList));
             List<Item> items = itemService.viewWishlist(wishList.getWishlistId());
             model.addAttribute("items", items);
-            return "showWishList";
-        } else {
-            return "showWishList";
         }
+        return "showWishList";
     }
 
     @PostMapping("/makeList")
@@ -112,9 +112,12 @@ public class WishListController {
 
 
     @GetMapping("/createList")
-    public String createList() {
+    public String createList(Model model) {
+        WishList wishlist = new WishList();
+        model.addAttribute("wishlist", wishlist);
         return "createList";
     }
+
 
     @GetMapping("/discoveryPage")
     public String discoveryPage(Model model) {
@@ -132,6 +135,7 @@ public class WishListController {
         return "showWishList";
     }
 
+
     @GetMapping("/addItem/{wishlist_id}")
     public String addItem(@PathVariable("wishlist_id") int wishlist_id, Model model) {
         model.addAttribute("wishlist_id", wishlist_id);
@@ -147,11 +151,8 @@ public class WishListController {
     @GetMapping("/deleteWishlist/{id}")
     public String deleteWishlist(@PathVariable("id") int id) {
         boolean deleted = wishListService.deleteWishlist(id);
-        if (deleted) {
             return "redirect:/homePage";
-        } else {
-            return "redirect:/homePage";
-        }
+
     }
 
     @PostMapping("/reserveItem")
@@ -170,11 +171,8 @@ public class WishListController {
     @GetMapping("/deleteItem/{id}")
     public String deleteItem(@PathVariable("id") int id) {
         boolean deleted = itemService.deleteItem(id);
-        if (deleted) {
             return "redirect:/homePage";
-        } else {
-            return "redirect:/homePage";
-        }
+
     }
 
     @GetMapping("/editItems/{item_id}")

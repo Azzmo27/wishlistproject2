@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../static/search.css">
-    <link rel="stylesheet" type="text/css" href="../static/base.css">
-    <script src="https://kit.fontawesome.com/d17da6709b.js"></script>
 </head>
 <body>
 <div id="menuHeader">
@@ -16,7 +14,9 @@
 <a href="discoveryPage" style=" color: #a174d7;" id="discovery-button">Discovery</a>
 <div id="search-input">
     <form action="/viewWishlistFromSearchbar" method="GET">
-        <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
+        <label>
+            <input type="text" placeholder="Search on your friend's wishlist..." name="wishlist_id" required>
+        </label>
         <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
@@ -52,8 +52,9 @@
         <tbody>
 
         <tr th:if="${items != null}" th:each="item: ${items}">
-            <form action="/reserveItem" method="post">
-                <td>
+            <form action="/showWishList" method="post">
+
+            <td>
                     <span class="itemName" name="itemName" th:text="${item.item_name}"></span>
                 </td>
                 <td>
@@ -89,6 +90,5 @@
     </table>
 </div>
 
-<script src="js/search.js"></script>
 </body>
 </html>

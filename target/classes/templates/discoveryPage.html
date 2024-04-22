@@ -5,7 +5,28 @@
     <title>Discovery Page</title>
 
     <style>
+        /* Tilføj stil til ønskelisten */
+        .wishlist {
+            text-align: center; /* Centrer ønskelisten */
+            font-size: 20px;/* Øg skriftstørrelsen */
+        }
 
+        .wishlist li {
+            margin-bottom: 10px;/* Tilføj lidt afstand mellem ønskerne */
+            list-style-type: none;
+        }
+
+        .wishlist li button {
+            background: none;
+            border: none;
+            color: #a174d7;
+            cursor: pointer;
+            font-size: inherit;
+        }
+
+        .wishlist li button:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -35,29 +56,27 @@
 <div class="photo">
     <div class="wishlist-section">
         <div class="wishlist">
-            <h2>Birthday Wishlist</h2>
+            <h2>Inspiration for your next gift!</h2>
             <ul>
-                <li onclick="addItemToWishlist('Noise-cancelling headphones')">Noise-cancelling headphones</li>
-                <li onclick="addItemToWishlist('Smartwatch')">Smartwatch</li>
-                <li onclick="addItemToWishlist('Wireless earbuds')">Wireless earbuds</li>
-                <li onclick="addItemToWishlist('Cozy weighted blanket')">A cozy weighted blanket</li>
-                <li onclick="addItemToWishlist('High-quality cookware')">A set of high-quality cookware</li>
-                <li onclick="addItemToWishlist('Espresso machine')">Espresso machine</li>
-                <li onclick="addItemToWishlist('Fitness tracker')">A new fitness tracker</li>
-                <li onclick="addItemToWishlist('Yoga mat')">Yoga mat</li>
-                <li onclick="addItemToWishlist('Resistance bands')">Resistance bands</li>
+
+                <li><button onclick="addItemToWishlist('Noise-cancelling headphones')">Noise-cancelling headphones</button></li>
+                <li><button onclick="addItemToWishlist('Smartwatch')">Smartwatch</button></li>
+                <li><button onclick="addItemToWishlist('Wireless earbuds')">Wireless earbuds</button></li>
+                <li><button onclick="addItemToWishlist('Cozy weighted blanket')">A cozy weighted blanket</button></li>
+                <li><button onclick="addItemToWishlist('High-quality cookware')">A set of high-quality cookware</button></li>
+                <li><button onclick="addItemToWishlist('Espresso machine')">Espresso machine</button></li>
+                <li><button onclick="addItemToWishlist('Fitness tracker')">A new fitness tracker</button></li>
+                <li><button onclick="addItemToWishlist('Yoga mat')">Yoga mat</button></li>
+                <li><button onclick="addItemToWishlist('Resistance bands')">Resistance bands</button></li>
             </ul>
         </div>
 
-        <!-- Add more wishlist sections here -->
     </div>
 </div>
 
 <script>
     function addItemToWishlist(itemName) {
-        // Her kan du tilføje JavaScript-funktionalitet til at tilføje ønsket til brugerens ønskeliste
         alert("Item added to wishlist: " + itemName);
-        // Eksempel: Du kan sende en AJAX-anmodning til serveren for at tilføje ønsket til ønskelisten
     }
 </script>
 

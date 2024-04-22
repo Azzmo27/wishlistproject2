@@ -53,10 +53,11 @@ public class WishListRepository {
             return wishLists.get(0);
         }
     }
-    public void createWishList(WishList w, int userId) {
+    public void createWishList(WishList w, int user) {
         String sql = "INSERT INTO wishlist (wishlist_name, wishlist_description, user_id) VALUES (?, ?, ?)";
-        template.update(sql, w.getWishlistName(), w.getWishlistDescription(), userId);
+        template.update(sql, w.getWishlistName(), w.getWishlistDescription(), user);
     }
+
     public WishList findWishlistByUniqueUrl(String uniqueUrl) {
         String sql = "SELECT * FROM wishlist WHERE unique_url = ?";
         RowMapper<WishList> rowMapper = new BeanPropertyRowMapper<>(WishList.class);
@@ -81,9 +82,12 @@ public class WishListRepository {
     }
     public Boolean deleteWishlist(int id) {
         String deleteItemsSql = "DELETE FROM item WHERE wishlist_id = ?";
-        template.update(deleteItemsSql, id);
+        int itemsDeleted = template.update(deleteItemsSql, id);
+
         String deleteWishlistSql = "DELETE FROM wishlist WHERE wishlist_id = ?";
-        template.update(deleteWishlistSql, id);
-        return true;
+        int wishlistDeleted = template.update(deleteWishlistSql, id);
+
+        return itemsDeleted > 0 && wishlistDeleted > 0;
     }
+
 }

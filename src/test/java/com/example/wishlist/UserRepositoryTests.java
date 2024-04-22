@@ -64,7 +64,7 @@ public class UserRepositoryTests {
         String username = "testUser";
         String password = "password";
 
-        // Simulerer, at queryForObject kaster en EmptyResultDataAccessException
+
         when(jdbcTemplate.queryForObject(anyString(), any(RowMapper.class), anyString(), anyString()))
                 .thenThrow(new EmptyResultDataAccessException(1));
 

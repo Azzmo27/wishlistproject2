@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../static/background.css">
     <link rel="stylesheet" type="text/css" href="../static/viewWishList.css">
-    <script src="https://kit.fontawesome.com/d17da6709b.js"> </script>
+
 </head>
 
 <body>
@@ -35,15 +34,17 @@
     <div class="wishlist_box">
         <table>
             <tbody>
-            <h1 style="color: black"> View Wishlist </h1>
-
-
+            <tr>
+                <td colspan="3">
+                    <h1 style="color: black">View Wishlist</h1>
+                </td>
+            </tr>
             <tr th:each="item:${items}">
                 <td>
                     <span th:text="${item.itemName}"></span>
                 </td>
                 <td>
-                    <span  th:text="${item.itemDescription}"></span>
+                    <span th:text="${item.itemDescription}"></span>
                 </td>
                 <td style="display: flex; align-items: center;">
                     <a th:href="@{'/editItems/'+${item.itemId}}" class="btn-editItems">
