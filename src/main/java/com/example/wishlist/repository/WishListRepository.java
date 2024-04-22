@@ -37,7 +37,7 @@ public class WishListRepository {
         if (existingWishList != null) {
 
             String updateSql = "UPDATE wishlist SET wishlist_name = ?, wishlist_description = ?, unique_url = ? WHERE wishlist_id = ?";
-            template.update(updateSql, wishList.getWishlistName(), wishList.getWishlistDescription(), wishList.getUniqueUrl(), wishlistId); // Use wishlistId here
+            template.update(updateSql, wishList.getWishlistName(), wishList.getWishlistDescription(), wishList.getUniqueUrl(), wishlistId); 
         } else {
 
             throw new IllegalArgumentException("Wishlist with ID " + wishlistId + " does not exist.");

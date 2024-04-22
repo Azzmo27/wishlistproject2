@@ -104,11 +104,13 @@ public class WishListController {
         wishListService.createWishList(wishList, userId);
         return "redirect:/homePage";
     }
+
     @PostMapping("/saveWishlist")
     public String saveWishlist(@ModelAttribute WishList wishList) {
         wishListService.saveOrUpdateWishList(wishList);
-        return "redirect:/homePage";
+        return "redirect:/showWishList";
     }
+
 
 
     @GetMapping("/createList")
