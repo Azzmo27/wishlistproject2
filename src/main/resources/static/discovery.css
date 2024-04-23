@@ -63,7 +63,7 @@ input[type="checkbox"]:checked ~ .wishlist-text {
     width: 260px;
     left: 25px;
     top: 15px;
-    border-radius: 10px; /* added border-radius */
+    border-radius: 10px;
 }
 
 .first-border:hover {
@@ -77,7 +77,7 @@ input[type="checkbox"]:checked ~ .wishlist-text {
     width: 280px;
     left: 400px;
     top: -502px;
-    border-radius: 10px; /* added border-radius */
+    border-radius: 10px;
 }
 
 

@@ -22,14 +22,13 @@
     border-radius: 5px;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* Add a transition effect when hovering over the card */
     transition: 0.3s;
     cursor: pointer;
     z-index: 1;
     position: relative;
 }
 
-/* Form and colour */
+
 .sky-card {
     background-color: #87CEFA;
     background-image: linear-gradient(180deg, #87CEFA, #c6e8e8, #cff6f6 100%);
@@ -41,19 +40,17 @@
     flex-direction: column;
 }
 
-/* Add a stronger box shadow when hovering over the card */
+
 .sky-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the wishlist item name and "Add Item" button */
 .wishlistname {
-    /* Align items vertically */
+
     display: flex;
     align-items: center;
-    /* Create some space between the name and button */
     justify-content: space-between;
-    /* Add padding to the top and bottom */
+
     padding: 10px;
 
 }
